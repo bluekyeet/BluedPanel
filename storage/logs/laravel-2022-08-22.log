@@ -1,0 +1,38 @@
+[2022-08-22 05:35:11] production.ERROR: There are no commands defined in the "p:enviroment" namespace.
+
+Did you mean one of these?
+    optimize
+    p
+    p:environment
+    p:location
+    p:maintenance
+    p:node
+    p:schedule
+    p:server
+    p:user
+    package {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"p:enviroment\" namespace.
+
+Did you mean one of these?
+    optimize
+    p
+    p:environment
+    p:location
+    p:maintenance
+    p:node
+    p:schedule
+    p:server
+    p:user
+    package at /var/www/jexactyl/vendor/symfony/console/Application.php:648)
+[stacktrace]
+#0 /var/www/jexactyl/vendor/symfony/console/Application.php(699): Symfony\\Component\\Console\\Application->findNamespace()
+#1 /var/www/jexactyl/vendor/symfony/console/Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 /var/www/jexactyl/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 /var/www/jexactyl/vendor/laravel/framework/src/Illuminate/Console/Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 /var/www/jexactyl/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 /var/www/jexactyl/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2022-08-22 19:36:10] production.NOTICE: A query exception was encountered while trying to load settings from the database: SQLSTATE[HY000] [1045] Access denied for user 'pterodactyl'@'localhost' (using password: NO) (SQL: select * from `settings`)  
+[2022-08-22 19:36:35] production.NOTICE: A query exception was encountered while trying to load settings from the database: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'panel.settings' doesn't exist (SQL: select * from `settings`)  
+[2022-08-22 19:44:14] production.NOTICE: A query exception was encountered while trying to load settings from the database: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'panel.settings' doesn't exist (SQL: select * from `settings`)  
+[2022-08-22 19:44:43] production.NOTICE: A query exception was encountered while trying to load settings from the database: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'panel.settings' doesn't exist (SQL: select * from `settings`)  
