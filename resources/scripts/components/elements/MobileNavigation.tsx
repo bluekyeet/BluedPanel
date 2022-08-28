@@ -77,15 +77,19 @@ export default () => {
                         <Icon.User size={20} />
                     </NavLink>
                     {store && (
-                    <NavLink to={'/store/balance'}>
-                        <Icon.DollarSign size={20} />
-                    </NavLink>
-                    <NavLink to={'/store/referrals'}>
-                        <Icon.Link size={20} />
-                    </NavLink>
-                    <NavLink to={'/store/resources'}>
-                        <Icon.ShoppingCart size={20} />
-                    </NavLink>
+                        <NavLink to={'/store/balance'}>
+                            <Icon.DollarSign size={20} />
+                        </NavLink>
+                    )}
+                    {store && (
+                        <NavLink to={'/store/referrals'}>
+                            <Icon.Link size={20} />
+                        </NavLink>
+                    )}
+                    {store && (
+                        <NavLink to={'/store/resources'}>
+                            <Icon.ShoppingCart size={20} />
+                        </NavLink>
                     )}
                     {rootAdmin && (
                         <a href={'/admin'} rel={'noreferrer'}>
