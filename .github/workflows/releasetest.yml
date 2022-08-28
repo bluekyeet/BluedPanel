@@ -7,10 +7,18 @@ on:
 name: Create BluedPanel Release
 
 jobs:
-  build:
-    name: Create Release
+  release:
+    name: ubuntu-20.04
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '16.x'
+      - name: Build assets
+        run: |
+          yarn install
+          yarn run build:production
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Create Release
@@ -21,9 +29,5 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
-          body: |
-            Changes in this Release
-            - First Change
-            - Second Change
           draft: false
           prerelease: false
