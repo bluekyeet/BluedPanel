@@ -74,15 +74,19 @@ export default () => {
                             <Icon.DollarSign size={30} css={tw`my-8`} />
                         </Tooltip>
                     </NavLink>
-                <NavLink to={'/store/referrals'} className={'navigation-link'}>
-                    <Tooltip placement={'bottom'} content={'Referrals'}>
-                        <Icon.Link size={30} css={tw`my-8`} />
-                    </Tooltip>
-                </NavLink>
-                <NavLink to={'/store/resources'} className={'navigation-link'}>
-                    <Tooltip placement={'bottom'} content={'Buy Resources'}>
-                        <Icon.ShoppingCart size={30} css={tw`my-8`} />
-                    </Tooltip>
+                )}
+                {store && (
+                    <NavLink to={'/store/referrals'} className={'navigation-link'}>
+                        <Tooltip placement={'bottom'} content={'Referrals'}>
+                            <Icon.Link size={30} css={tw`my-8`} />
+                        </Tooltip>
+                    </NavLink>
+                )}
+                {store && (
+                    <NavLink to={'/store/resources'} className={'navigation-link'}>
+                        <Tooltip placement={'bottom'} content={'Buy Resources'}>
+                            <Icon.ShoppingCart size={30} css={tw`my-8`} />
+                        </Tooltip>
                 </NavLink>
                 )}
                 {rootAdmin && (
