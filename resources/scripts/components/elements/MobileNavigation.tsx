@@ -68,12 +68,15 @@ export default () => {
                     <NavLink to={'/'} exact>
                         <Icon.Server size={20} />
                     </NavLink>
-                    <NavLink to={'store/create'} exact>
-                        <Icon.Plus size={20} />
-                    </NavLink>
+                    {store && (
+                        <NavLink to={'store/create'} exact>
+                            <Icon.Plus size={20} />
+                        </NavLink>
+                    )}
                     <NavLink to={'/account'}>
                         <Icon.User size={20} />
                     </NavLink>
+                    {store && (
                     <NavLink to={'/store/balance'}>
                         <Icon.DollarSign size={20} />
                     </NavLink>
@@ -83,6 +86,7 @@ export default () => {
                     <NavLink to={'/store/resources'}>
                         <Icon.ShoppingCart size={20} />
                     </NavLink>
+                    )}
                     {rootAdmin && (
                         <a href={'/admin'} rel={'noreferrer'}>
                             <Icon.Settings size={20} />
