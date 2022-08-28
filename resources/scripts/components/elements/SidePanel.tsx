@@ -56,21 +56,24 @@ export default () => {
                         <Icon.Home size={30} css={tw`my-8`} />
                     </Tooltip>
                 </NavLink>
-                <NavLink to={'/store/create'} className={'navigation-link'}>
-                    <Tooltip placement={'bottom'} content={'Create Server'}>
-                        <Icon.Plus size={30} css={tw`my-8`} />
-                    </Tooltip>
-                </NavLink>
+                {store && (
+                    <NavLink to={'/store/create'} className={'navigation-link'}>
+                        <Tooltip placement={'bottom'} content={'Create Server'}>
+                            <Icon.Plus size={30} css={tw`my-8`} />
+                        </Tooltip>
+                    </NavLink>
+                )}
                 <NavLink to={'/account'} className={'navigation-link'}>
                     <Tooltip placement={'bottom'} content={'Account'}>
                         <Icon.User size={30} css={tw`my-8`} />
                     </Tooltip>
                 </NavLink>
-                <NavLink to={'/store/balance'} className={'navigation-link'}>
-                    <Tooltip placement={'bottom'} content={'Coins'}>
-                        <Icon.DollarSign size={30} css={tw`my-8`} />
-                    </Tooltip>
-                </NavLink>
+                {store && (
+                    <NavLink to={'/store/balance'} className={'navigation-link'}>
+                        <Tooltip placement={'bottom'} content={'Coins'}>
+                            <Icon.DollarSign size={30} css={tw`my-8`} />
+                        </Tooltip>
+                    </NavLink>
                 <NavLink to={'/store/referrals'} className={'navigation-link'}>
                     <Tooltip placement={'bottom'} content={'Referrals'}>
                         <Icon.Link size={30} css={tw`my-8`} />
@@ -81,6 +84,7 @@ export default () => {
                         <Icon.ShoppingCart size={30} css={tw`my-8`} />
                     </Tooltip>
                 </NavLink>
+                )}
                 {rootAdmin && (
                     <a href={'/admin'} className={'navigation-link'}>
                         <Tooltip placement={'bottom'} content={'Admin'}>
